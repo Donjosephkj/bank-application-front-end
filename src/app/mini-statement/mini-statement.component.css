@@ -1,0 +1,47 @@
+.child {
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  text-align: center;
+  height: 500px;
+  
+}
+.parent{
+    background-color: #e0e0e0;
+    height:600px;
+}
+.searchdiv{
+  display: flex;
+  float: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  
+}
+.tablediv{
+  height: 250px;
+  overflow: scroll;
+  width: 100%;
+  overflow-x  : hidden;
+}
+#style-2::-webkit-scrollbar-track
+{
+	/* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+	border-radius: 10px;
+	background-color: #ffffff00;
+  margin-bottom: 150px;
+  margin-top: 20px;
+}
+
+#style-2::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #00000000;
+}
+
+#style-2::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #363636;
+}

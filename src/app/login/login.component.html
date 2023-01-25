@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="row pe-5">
+  <div class="col-7">
+    <img
+      src="../../assets/images/3d-casual-life-mobile-banking-transaction.png"
+      alt=""
+      class="loginimage"
+    />
+  </div>
+  <div class=" col-5 mt-5 pe-5 pt-5">
+    <form (ngSubmit)="Login()" [formGroup]="loginForm" action="" class="border p-5 mt-5 rounded-5">
+      <div>
+        <input
+          name="acno"
+          formControlName="acno"
+          type="text"
+          class="form-control  rounded-5 "
+          placeholder="Account Number"
+        />
+      </div>
+      <div *ngIf="loginForm.get('acno')?.errors&&loginForm.get('acno')?.touched" class="text-danger invalid mb-3">Invalid Account Number</div>
+      <div>
+        <input
+          name="pswd"
+          type="password"
+          formControlName="pswd"
+          class="form-control rounded-5 mt-4"
+          placeholder="Password"
+        />
+      </div>
+      <div *ngIf="loginForm.get('pswd')?.errors&&loginForm.get('pswd')?.touched" class="text-danger invalid mb-3">Invalid Account Number</div>
+
+      <div class="text-danger invalid">{{errorMsg}}</div>
+
+      <div class="mt-4 ">
+        <button type="submit" class="btn btn-primary">
+          Login &nbsp;
+          <span *ngIf="successMsg" class="spinner-border text-light loading align-middle" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </span></button
+        >&nbsp;
+        <span
+          >New User? Click Here to <a routerLink="register">register</a></span
+        >
+      </div>
+    </form>
+  </div>
+</div>
